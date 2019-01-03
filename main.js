@@ -141,6 +141,13 @@ document.addEventListener("keydown", function(event) {
   if(shift && event.keyCode===189){
       document.getElementById("comm").innerHTML+="_";
   }
+  if(event.keyCode===222){
+    if(shift){
+      document.getElementById("comm").innerHTML+="\"";
+    }else{
+      document.getElementById("comm").innerHTML+="'";
+    }
+  }
   if(event.keyCode===8){
     var q="";
     for(var i=0;i<document.getElementById("comm").innerHTML.length-1;i++){
