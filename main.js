@@ -22,7 +22,9 @@ function SALAS(){
   }
   this.get=function(coms){
     if(coms[1]="IP_ADDRESS"){
-      return this.getIP()
+      this.getIP();
+      return this.getIP();
+      
     }
   }
   this.getIP=function(){
