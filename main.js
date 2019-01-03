@@ -1,4 +1,5 @@
 var ipaddress;
+var shift=false;
 setInterval(function(){
   document.getElementsByClassName("main")[0].height=window.innerHeight;
 },15);
@@ -95,10 +96,17 @@ var letters="abcdefghijklmnopqrstuvwxyz"
 document.addEventListener("keydown", function(event) { 
   console.log(event.keyCode);
   if(event.keyCode>64&&event.keyCode<91){
-    document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65)
+    if(!shift){
+      document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65)
+    }else{
+      document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65).toUpperCase;
+    }
   }
   if(event.keyCode===13){
     salas.run(document.getElementById("comm").innerHTML);
+  }
+  if(shift && event.keyCode===189){
+      document.getElementById("comm").innerHTML+="_";
   }
   if(event.keyCode===8){
     var q="";
