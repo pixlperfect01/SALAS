@@ -1,7 +1,7 @@
 var salas=new SALAS();
 function SALAS(){
   this.run=function (com){
-    decrypt(com);
+    console.log(decrypt(com));
   }
   this.get=function(coms){
     if(coms[1]="IP_ADDRESS"){
@@ -15,7 +15,7 @@ function decrypt(com){
   var tmp="";
   console.log(coms);
   if(coms[0]==="get"){
-    salas.get(coms);
+    return salas.get(coms);
   }
 }
 
