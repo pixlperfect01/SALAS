@@ -1,3 +1,4 @@
+var ipaddress;
 var salas=new SALAS();
 function SALAS(){
   this.run=function (com){
@@ -26,7 +27,6 @@ function SALAS(){
   }
   this.getIP=function(){
     function getUserIP(onNewIP) { 
-      var ipaddress;
       var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
       var pc = new myPeerConnection({
         iceServers: []
