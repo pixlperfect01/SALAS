@@ -86,7 +86,11 @@ function split(str,char){
 
 var letters="abcdefghijklmnopqrstuvqxyz"
 document.addEventListener("keydown", function(event) { 
+  console.log(event.keyCode);
   if(event.keyCode>64&&event.keyCode<91){
     document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65)
+  }
+  if(event.keyCode===13){
+    salas.run(document.getElementById("comm").innerHTML);
   }
 });
