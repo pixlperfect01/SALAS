@@ -23,8 +23,7 @@ function SALAS(){
   this.get=function(coms){
     if(coms[1]="IP_ADDRESS"){
       this.getIP();
-      return this.getIP();
-      
+      return ipaddress;
     }
   }
   this.getIP=function(){
@@ -57,7 +56,6 @@ function SALAS(){
     getUserIP(function(ip){
       ipaddress=ip;
     });
-    return ipaddress;
   }
 }
 
