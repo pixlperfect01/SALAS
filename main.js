@@ -99,7 +99,7 @@ document.addEventListener("keydown", function(event) {
     if(!shift){
       document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65)
     }else{
-      document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65).toUpperCase;
+      document.getElementById("comm").innerHTML+=letters.charAt(event.keyCode-65).toUpperCase();
     }
   }
   if(event.keyCode===13){
