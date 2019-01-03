@@ -220,4 +220,11 @@ document.addEventListener("keydown", function(event) {
   if(event.keyCode===32){
     document.getElementById("comm").innerHTML+=" ";
   }
+  if(event.keyCode===191){
+    if(shift){
+    document.getElementById("comm").innerHTML+="?";
+    }else{
+    document.getElementById("comm").innerHTML+="/";
+    }
+  }
 });
