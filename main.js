@@ -5,7 +5,7 @@ setInterval(function(){
 },15);
 var salas=new SALAS();
 function SALAS(){
-  this.run=function (com){
+  this.run=function(com){
     this.console.log(this.decrypt(com));
   }
   this.decrypt=function(com){
