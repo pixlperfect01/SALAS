@@ -19,6 +19,10 @@ function SALAS(){
     if(coms[0]==="clear"){
       this.console.clear();
     }
+    if(coms[0]==="log"){
+      coms.splice(0,1);
+      this.console.log(coms[0]);
+    }
   }
   this.console={
     log:function(i){
@@ -73,6 +77,32 @@ function SALAS(){
   }
 }
 
+
+
+
+
+
+function split(str){
+  if(str===''||!str)
+    return;
+  var out=[];
+  var tmp="";
+  var iq=false
+  for(var i=0;i<str.length;i++){
+    if(str.charAt(i)==="\""){
+      iq=!iq;
+    }else if(str.charAt(i)===" "&&!iq){
+      out.push(tmp);
+      tmp="";
+    }else{
+      tmp+=str.charAt(i);
+    }
+  }
+  out.push(tmp);
+  return out;
+}
+
+/*
 function split(str,char){
   if(str===''||!str||char===''||!char)
     return;
@@ -89,7 +119,7 @@ function split(str,char){
   out.push(tmp);
   return out;
 }
-
+*/
 
 
 
