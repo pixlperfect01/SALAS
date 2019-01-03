@@ -5,7 +5,7 @@ function SALAS(){
   }
   this.console={
     log:function(i){
-      
+      document.getElementById("console").children[0].innerHTML+=i+"\n";
     }
   }
   this.get=function(coms){
