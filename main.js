@@ -75,3 +75,15 @@ function split(str,char){
   out.push(tmp);
   return out;
 }
+
+
+
+
+
+
+var letters="abcdefghijklmnopqrstuvqxyz"
+document.addEventListener("keydown", function(event) { 
+  if(keyEvent.keyCode>64&&keyEvent.keyCode<91){
+    document.getElementById("comm").innerHTML+=(keyEvent.keyCode-64)
+  }
+});
