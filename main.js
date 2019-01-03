@@ -126,6 +126,8 @@ function split(str,char){
 
 
 var letters="abcdefghijklmnopqrstuvwxyz"
+var numbers="0123456789";
+var chars=")!@#$%^&*(";
 document.addEventListener("keydown", function(event) { 
   console.log(event.keyCode);
   if(event.keyCode>64&&event.keyCode<91){
@@ -146,6 +148,13 @@ document.addEventListener("keydown", function(event) {
       document.getElementById("comm").innerHTML+="\"";
     }else{
       document.getElementById("comm").innerHTML+="'";
+    }
+  }
+  if(event.keyCode>47&&event.keyCode<58){
+    if(!shift){
+      document.getElementById("comm").innerHTML+=numbers.charAt(event.keyCode-48);
+    }else{
+      document.getElementById("comm").innerHTML+=chars.charAt(event.keyCode-48);
     }
   }
   if(event.keyCode===8){
