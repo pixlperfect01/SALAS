@@ -16,6 +16,9 @@ function SALAS(){
       coms.splice(0,1);
       return this.get(coms);
     }
+    if(coms[0]==="clear"){
+      this.console.clear();
+    }
   }
   this.console={
     log:function(i){
