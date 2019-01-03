@@ -17,6 +17,7 @@ function SALAS(){
     },
     clear:function(){
       document.getElementById("console").children[0].innerHTML="";
+    }
   }
   this.get=function(coms){
     if(coms[1]="IP_ADDRESS"){
