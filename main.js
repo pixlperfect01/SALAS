@@ -1,12 +1,22 @@
 var salas=new SALAS();
 function SALAS(){
   this.run=function (com){
-    console.log(decrypt(com));
+    this.console.log(this.decrypt(com));
+  }
+  this.decrypt=function(com){
+    var coms=split(com,' ');
+    var tmp="";
+    console.log(coms);
+    if(coms[0]==="get"){
+      return this.get(coms);
+    }
   }
   this.console={
     log:function(i){
       document.getElementById("console").children[0].innerHTML+=i+"\n";
-    }
+    },
+    clear:function(){
+      document.getElementById("console").children[0].innerHTML="";
   }
   this.get=function(coms){
     if(coms[1]="IP_ADDRESS"){
@@ -45,15 +55,6 @@ function SALAS(){
       ipaddress=ip;
     });
     return ipaddress;
-  }
-}
-
-function decrypt(com){
-  var coms=split(com,' ');
-  var tmp="";
-  console.log(coms);
-  if(coms[0]==="get"){
-    return salas.get(coms);
   }
 }
 
