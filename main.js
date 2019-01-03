@@ -106,4 +106,7 @@ document.addEventListener("keydown", function(event) {
     }
     document.getElementById("comm").innerHTML=q;
   }
+  if(event.keyCode===32){
+    document.getElementById("comm").innerHTML+=" ";
+  }
 });
