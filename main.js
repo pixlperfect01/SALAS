@@ -140,14 +140,60 @@ document.addEventListener("keydown", function(event) {
   if(event.keyCode===13){
     salas.run(document.getElementById("comm").innerHTML);
   }
-  if(shift && event.keyCode===189){
+  if(event.keyCode===189){
+    if(shift){
       document.getElementById("comm").innerHTML+="_";
+    }else{
+      document.getElementById("comm").innerHTML+="-";
+    }
+  }
+  if(event.keyCode===187){
+    if(shift){
+      document.getElementById("comm").innerHTML+="+";
+    }else{
+      document.getElementById("comm").innerHTML+="=";
+    }
   }
   if(event.keyCode===222){
     if(shift){
       document.getElementById("comm").innerHTML+="\"";
     }else{
       document.getElementById("comm").innerHTML+="'";
+    }
+  }
+  if(event.keyCode===188){
+    if(shift){
+      document.getElementById("comm").innerHTML+="<";
+    }else{
+      document.getElementById("comm").innerHTML+=",";
+    }
+  }
+  if(event.keyCode===190){
+    if(shift){
+      document.getElementById("comm").innerHTML+=">";
+    }else{
+      document.getElementById("comm").innerHTML+=".";
+    }
+  }
+  if(event.keyCode===186){
+    if(shift){
+      document.getElementById("comm").innerHTML+=":";
+    }else{
+      document.getElementById("comm").innerHTML+=";";
+    }
+  }
+  if(event.keyCode===219){
+    if(shift){
+      document.getElementById("comm").innerHTML+="{";
+    }else{
+      document.getElementById("comm").innerHTML+="[";
+    }
+  }
+  if(event.keyCode===221){
+    if(shift){
+      document.getElementById("comm").innerHTML+="}";
+    }else{
+      document.getElementById("comm").innerHTML+="]";
     }
   }
   if(event.keyCode>47&&event.keyCode<58){
