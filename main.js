@@ -12,7 +12,7 @@ function decrypt(com){
 }
 
 function split(str,char){
-  if(str=''||!str||char=''||!char)
+  if(str===''||!str||char===''||!char)
     return;
   var out=[];
   var tmp="";
@@ -24,5 +24,6 @@ function split(str,char){
       tmp="";
     }
   }
+  out.push(tmp);
   return out;
 }
