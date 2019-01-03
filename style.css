@@ -2,3 +2,9 @@
   background-color:#000000;
   color:#00FF00;
 }
+#comm{
+  overflow:scroll;
+}
+#console{
+  overflow:scroll;
+}
