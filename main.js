@@ -1,4 +1,7 @@
 var ipaddress;
+setInterval(function(){
+  document.getElementsByClassName("main")[0].height=window.innerHeight;
+},15);
 var salas=new SALAS();
 function SALAS(){
   this.run=function (com){
