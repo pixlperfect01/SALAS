@@ -13,7 +13,7 @@ function decrypt(com){
 
 function split(str,char){
   if(str=''||!str||char=''||!char)
-    return null;
+    return;
   var out=[];
   var tmp="";
   for(var i=0;i<str.length;i++){
