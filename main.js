@@ -29,6 +29,7 @@ function SALAS(){
       this.getIP();
       return ipaddress;
     }
+  }
   this.get=function(coms){
     if(coms[0]==="User"){
       coms.splice(0,1);
