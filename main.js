@@ -23,6 +23,13 @@ function SALAS(){
       coms.splice(0,1);
       this.console.log(coms[0]);
     }
+    if(coms[0]==="open"){
+      coms.splice(0,1);
+      this.windowOpen(coms);
+    }
+  }
+  this.windowOpen=function(coms){
+    window.open(coms[0]);
   }
   this.console={
     log:function(i){
