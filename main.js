@@ -93,4 +93,11 @@ document.addEventListener("keydown", function(event) {
   if(event.keyCode===13){
     salas.run(document.getElementById("comm").innerHTML);
   }
+  if(event.keyCode===8){
+    var q="";
+    for(var i=0;i<document.getElementById("comm").innerHTML.length-1;i++){
+      q+=document.getElementById("comm").innerHTML.charAt(i);
+    }
+    document.getElementById("comm").innerHTML=q;
+  }
 });
