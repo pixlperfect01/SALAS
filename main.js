@@ -3,6 +3,11 @@ function SALAS(){
   this.run=function (com){
     console.log(decrypt(com));
   }
+  this.console={
+    log:function(i){
+      
+    }
+  }
   this.get=function(coms){
     if(coms[1]="IP_ADDRESS"){
       return this.getIP()
