@@ -12,6 +12,7 @@ function SALAS(){
     var tmp="";
     console.log(coms);
     if(coms[0]==="get"){
+      coms.splice(0,1);
       return this.get(coms);
     }
   }
@@ -23,10 +24,15 @@ function SALAS(){
       document.getElementById("console").children[0].innerHTML="";
     }
   }
-  this.get=function(coms){
-    if(coms[1]="IP_ADDRESS"){
+  this.getUser=function(){
+    if(coms[0]==="IP_ADDRESS"){
       this.getIP();
       return ipaddress;
+    }
+  this.get=function(coms){
+    if(coms[0]==="User"){
+      coms.splice(0,1);
+      return this.getUser();
     }
   }
   this.getIP=function(){
