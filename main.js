@@ -28,7 +28,7 @@ function SALAS(){
       document.getElementById("console").children[0].innerHTML="";
     }
   }
-  this.getUser=function(){
+  this.getUser=function(coms){
     if(coms[0]==="IP_ADDRESS"){
       this.getIP();
       return ipaddress;
@@ -37,7 +37,7 @@ function SALAS(){
   this.get=function(coms){
     if(coms[0]==="User"){
       coms.splice(0,1);
-      return this.getUser();
+      return this.getUser(coms);
     }
   }
   this.getIP=function(){
