@@ -84,7 +84,7 @@ function split(str,char){
 
 
 
-var letters="abcdefghijklmnopqrstuvqxyz"
+var letters="abcdefghijklmnopqrstuvwxyz"
 document.addEventListener("keydown", function(event) { 
   console.log(event.keyCode);
   if(event.keyCode>64&&event.keyCode<91){
