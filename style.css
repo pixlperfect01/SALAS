@@ -6,5 +6,6 @@
   overflow:scroll;
 }
 #console{
+  max-height:500px;
   overflow:scroll;
 }
