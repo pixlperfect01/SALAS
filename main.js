@@ -227,7 +227,7 @@ document.addEventListener("keydown", function(event) {
     document.getElementById("comm").innerHTML+="/";
     }
   }
-});
-document.addEventListener("click",function(){
-  shift=!shift;
+  if(event.keyCode===20){
+    shift=!shift;
+  }
 });
