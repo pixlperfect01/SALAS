@@ -189,13 +189,6 @@ document.addEventListener("keydown", function(event) {
       document.getElementById("comm").innerHTML+=";";
     }
   }
-  if(event.keyCode===20){
-    if(shift){
-      shift=false;
-    }else{
-      shift=true;
-    }
-  }
   if(event.keyCode===219){
     if(shift){
       document.getElementById("comm").innerHTML+="{";
@@ -234,4 +227,7 @@ document.addEventListener("keydown", function(event) {
     document.getElementById("comm").innerHTML+="/";
     }
   }
+});
+document.addEventListener("click",function(){
+  shift=!shift;
 });
