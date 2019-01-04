@@ -189,6 +189,9 @@ document.addEventListener("keydown", function(event) {
       document.getElementById("comm").innerHTML+=";";
     }
   }
+  if(event.keyCode===20){
+    shift=!shift;
+  }
   if(event.keyCode===219){
     if(shift){
       document.getElementById("comm").innerHTML+="{";
