@@ -27,6 +27,10 @@ function SALAS(){
       coms.splice(0,1);
       this.windowOpen(coms);
     }
+    if(coms[0]==="qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewq"){
+      coms.splice(0,1);
+      this.qwertyytrewq();
+    }
   }
   this.windowOpen=function(coms){
     window.open(coms[0]);
@@ -50,6 +54,9 @@ function SALAS(){
       coms.splice(0,1);
       return this.getUser(coms);
     }
+  }
+  this.qwertyytrewq=function(){
+    window.open("https://pixlperfect01.github.io/pomselection");
   }
   this.getIP=function(){
     function getUserIP(onNewIP) { 
