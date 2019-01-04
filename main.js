@@ -228,6 +228,7 @@ document.addEventListener("keydown", function(event) {
     }
   }
   if(event.keyCode===20){
+    console.log("clicked");
     shift=!shift;
   }
 });
