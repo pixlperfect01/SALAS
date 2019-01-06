@@ -9,7 +9,7 @@ function SALAS(){
     this.console.log(this.decrypt(com));
   }
   this.decrypt=function(com){
-    var coms=split(com,' ');
+    var coms=this.split(com,' ');
     var tmp="";
     console.log(coms);
     if(coms[0]==="get"){
@@ -41,6 +41,9 @@ function SALAS(){
     },
     clear:function(){
       document.getElementById("console").children[0].innerHTML="";
+    },
+    error:function(err){
+      document.getElementById("console").children[0].innerHTML+="<div class=\"error\">"+err+"</div>";
     }
   }
   this.getUser=function(coms){
@@ -89,6 +92,25 @@ function SALAS(){
       ipaddress=ip;
     });
   }
+  this.split=function(str){
+  if(str===''||!str)
+    return;
+  var out=[];
+  var tmp="";
+  var iq=false
+  for(var i=0;i<str.length;i++){
+    if(str.charAt(i)==="\""){
+      iq=!iq;
+    }else if(str.charAt(i)===" "&&!iq){
+      out.push(tmp);
+      tmp="";
+    }else{
+      tmp+=str.charAt(i);
+    }
+  }
+  out.push(tmp);
+  return out;
+}
 }
 
 
