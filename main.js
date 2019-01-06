@@ -93,24 +93,28 @@ function SALAS(){
     });
   }
   this.split=function(str){
-  if(str===''||!str)
-    return;
-  var out=[];
-  var tmp="";
-  var iq=false
-  for(var i=0;i<str.length;i++){
-    if(str.charAt(i)==="\""){
-      iq=!iq;
-    }else if(str.charAt(i)===" "&&!iq){
-      out.push(tmp);
-      tmp="";
-    }else{
-      tmp+=str.charAt(i);
+    if(str===''||!str)
+      return;
+    var out=[];
+    var tmp="";
+    var iq=false;
+    for(var i=0;i<str.length;i++){
+      if(str.charAt(i)==="\""){
+        iq=!iq;
+      }else if(str.charAt(i)===" "&&!iq){
+        out.push(tmp);
+        tmp="";
+      }else{
+        tmp+=str.charAt(i);
+      }
     }
+    out.push(tmp);
+    if(iq){
+      this.console.error("Unclosed quotes");
+      return;
+    }
+    return out;
   }
-  out.push(tmp);
-  return out;
-}
 }
 
 
